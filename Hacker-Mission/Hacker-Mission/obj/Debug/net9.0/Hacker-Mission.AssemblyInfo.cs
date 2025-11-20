@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hacker-Mission")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53334e0cb23c3bb87bf84712f2e74fe074a9efeb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4d87095dc6757aaa06352d9746b2624607dcf7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hacker-Mission")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hacker-Mission")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
