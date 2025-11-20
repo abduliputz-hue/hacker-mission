@@ -9,6 +9,7 @@ using data;
 class HackerMission
 {
     public static bool progress = false;
+    public static string backEndUser = "";
 
     // Typing effect
     static void TypingEffect(string text, int delay)
@@ -29,7 +30,7 @@ class HackerMission
         TypingEffect("YOU ARE THE BACK-END USER : \n\n", 50);
         TypingEffect("WHAT IS YOUR NAME : ", 50);
 
-        string backEndUser = Console.ReadLine();
+        backEndUser = Console.ReadLine();
         TypingEffect("NOW SET PASSWORD : ", 50);
 
         Console.ReadLine();
@@ -277,13 +278,15 @@ class HackerMission
                     BlurTracks();
                     break;
                 case "4":
-                    func.database();
+                    
                     Console.Clear();
-                    Console.Write("Press any key to continue...");
+                    func.Database();
+                        
                     Console.Clear();
                     PhasesList();
                     break;
-
+                case "5":
+                    
 
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -296,8 +299,47 @@ class HackerMission
     }
 
 
-    //PhaseList.PhaseList_func();
-
+    public static void sell_data()
+    {
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("-----Chat With Specter -----");
+        Console.ResetColor();
+        Thread.Sleep(500);
+        
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.Write("[You] - 21:14 ");
+        Console.ResetColor();
+        TypingEffect("Are you Specter?\n\n", 100);
+        Thread.Sleep(500);
+        
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.Write("[Specter] - 21:14 ");
+        Console.ResetColor();
+        TypingEffect("Depends. Who’s asking?\n\n", 100);
+        Thread.Sleep(500);
+        
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.Write("[You] - 21:15 ");
+        Console.ResetColor();
+        TypingEffect("Someone who was told you have “the package.”\nI have the access code. Sending now.\n\n", 100);
+        Thread.Sleep(500);
+        
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write("[System] - 21:15. ");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Green;
+        TypingEffect("Buyer47 ", 100);
+        Console.ResetColor();
+        TypingEffect("sent a file: ", 100);
+        Console.ForegroundColor = ConsoleColor.Blue;
+        TypingEffect("access.key", 100);
+        Console.ResetColor();
+        Thread.Sleep(500);
+        
+        
+    }
+    
     public static void Story()
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
