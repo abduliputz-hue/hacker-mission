@@ -4,6 +4,12 @@ using System.Threading;
 
 class HackerMission
 {
+
+    public bool TrackProgress(bool progress)
+    {
+        progress = false;
+        return progress;
+    }
     // Typing effect
     static void TypingEffect(string text, int delay)
     {
@@ -14,6 +20,11 @@ class HackerMission
         }
     }
 
+    public static void gov_phase()
+    {
+
+    }
+
     public static void BackEndUserProtocol()
     {
         TypingEffect("YOU ARE THE BACK-END USER : \n\n", 50);
@@ -22,15 +33,16 @@ class HackerMission
         string backEndUser = Console.ReadLine();
         TypingEffect("NOW SET PASSWORD : ", 50);
 
-        string backEndUserPassword = Console.ReadLine();
+        Console.ReadLine();
 
         TypingEffect($"\n\nWELCOME BACK : {backEndUser}\n\n", 50);
 
     }
+ 
 
-    public static string GenerateRandomWord(int min = 3, int max = 8)
+    public static string GenerateRandomWord(int min = 5, int max = 8)
     {
-        const string chars = "abcdefghijklmnopqrstuvwxyz";
+        const string chars = "abcdefghijklmnopqrstuvwxyz1234567890'#!§$%&/()=?";
         Random rand = Random.Shared;
 
         int length = rand.Next(min, max);
@@ -169,7 +181,7 @@ class HackerMission
         Console.ResetColor();
 
         Console.BackgroundColor = ConsoleColor.White;
-        Console.ForegroundColor= ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.Black;
         TypingEffect("\n\nSelect Tool : ", 30);
         string userChoice = Console.ReadLine();
         Console.ResetColor();
@@ -199,7 +211,7 @@ class HackerMission
 
     public static void Story()
     {
-        Console.ForegroundColor= ConsoleColor.Cyan;
+        Console.ForegroundColor = ConsoleColor.Cyan;
         TypingEffect("\n/\n\n", 10);
         TypingEffect("In 2041, the government’s ultra-secure network AegisNet hides a secret protocol called Project Helix\n\n", 40);
         TypingEffect("an AI that can silently take [ MESSAGE HIDDEN ]\n\n", 60);
@@ -257,7 +269,7 @@ class HackerMission
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("Mission Start\n");
                     Console.ResetColor();
-                    PhasesList();  
+                    PhasesList();
                     break;
 
                 case "2":
@@ -272,6 +284,15 @@ class HackerMission
                     TypingEffect("Exiting...", 80);
                     Thread.Sleep(500);
                     return;
+                case "99":
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Dev Mode!!!");
+                    Thread.Sleep(1200);
+                    Console.ResetColor();
+                    Console.Clear();
+                    PhasesList();
+                    break;
 
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
