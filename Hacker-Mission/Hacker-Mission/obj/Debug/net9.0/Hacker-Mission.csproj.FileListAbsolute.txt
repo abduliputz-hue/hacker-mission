@@ -1,0 +1,15 @@
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\bin\Debug\net9.0\Hacker-Mission.exe
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\bin\Debug\net9.0\Hacker-Mission.deps.json
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\bin\Debug\net9.0\Hacker-Mission.runtimeconfig.json
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\bin\Debug\net9.0\Hacker-Mission.dll
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\bin\Debug\net9.0\Hacker-Mission.pdb
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\Hacker-Mission.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\Hacker-Mission.AssemblyInfoInputs.cache
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\Hacker-Mission.AssemblyInfo.cs
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\Hacker-Mission.csproj.CoreCompileInputs.cache
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\Hacker-Mission.sourcelink.json
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\Hacker-Mission.dll
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\refint\Hacker-Mission.dll
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\Hacker-Mission.pdb
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\Hacker-Mission.genruntimeconfig.cache
+C:\Users\gusta\RiderProjects\hacker-mission\Hacker-Mission\Hacker-Mission\obj\Debug\net9.0\ref\Hacker-Mission.dll
