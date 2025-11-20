@@ -1,12 +1,15 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Collections.Generic;
+using System.Text.Json;
+using data;
+
 
 class HackerMission
 {
-
     public static bool progress = false;
-    
+
     // Typing effect
     static void TypingEffect(string text, int delay)
     {
@@ -17,9 +20,8 @@ class HackerMission
         }
     }
 
-    public static void gov_phase()
+    public static void data()
     {
-
     }
 
     public static void BackEndUserProtocol()
@@ -33,9 +35,8 @@ class HackerMission
         Console.ReadLine();
 
         TypingEffect($"\n\nWELCOME BACK : {backEndUser}\n\n", 50);
-
     }
- 
+
 
     public static string GenerateRandomWord(int min = 5, int max = 8)
     {
@@ -63,6 +64,7 @@ class HackerMission
         {
             TypingEffect($"Injecting spoof packets...{i}0%\n", 1);
         }
+
         TypingEffect("\nBypass complete!\n", 50);
         Console.ReadLine();
     }
@@ -76,6 +78,7 @@ class HackerMission
         TypingEffect("Tracks blurred.\n", 60);
         Console.ReadLine();
     }
+
     static void CrackPassword()
     {
         Console.Clear();
@@ -99,14 +102,12 @@ class HackerMission
         Console.ResetColor();
 
 
-
         List<string> passwords = new List<string>()
         {
             "alpha123", "dragon", "matrix42"
         };
         while (true)
         {
-
             foreach (string password in passwords)
             {
                 TypingEffect("\n" + "- " + password, 50);
@@ -138,11 +139,11 @@ class HackerMission
                 TypingEffect("\n\nATTENTION : FIREWALLS ACTIVATED BY SYS.............", 100);
                 Console.ResetColor();
                 Console.Clear();
+                progress = true;
                 PhasesList();
                 break;
             }
         }
-        HackerMission.progress = true;
     }
 
 
@@ -166,9 +167,9 @@ class HackerMission
 
         TypingEffect("Select: ", 70);
     }
+
     public static void PhasesList()
     {
-
         List<string> phases = new List<string>()
         {
             "1 - Password Cracker", "2 - Bypass Firewall", "3 - BlurTracks"
@@ -181,26 +182,23 @@ class HackerMission
         if (progress == false)
         {
             foreach (string phase in phases)
-                    {
-            
-                        Console.ForegroundColor = ConsoleColor.Magenta;
-                        TypingEffect("\n" + phase, 50);
-                        Console.ResetColor();
-                    }
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                TypingEffect("\n" + phase, 50);
+                Console.ResetColor();
+            }
         }
 
         if (progress == true)
         {
             foreach (string phase in phases2)
             {
-            
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 TypingEffect("\n" + phase, 50);
-                Console.ResetColor();3
+                Console.ResetColor();
             }
         }
-        
-        
+
 
         Console.BackgroundColor = ConsoleColor.White;
         Console.ForegroundColor = ConsoleColor.Black;
@@ -208,65 +206,105 @@ class HackerMission
         string userChoice = Console.ReadLine();
         Console.ResetColor();
 
-        switch (userChoice)
+        if (progress == false)
         {
-            case "1":
-                CrackPassword();
-                break;
+            switch (userChoice)
+            {
+                case "1":
+                    CrackPassword();
+                    break;
 
-            case "2":
-                if (progress == true)
-                {
-                    FirewallBypass(); 
-                }
-                else
-                {
-                    Console.Clear();
+                case "2":
+                    if (progress == true)
+                    {
+                        FirewallBypass();
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        TypingEffect("To bypass the Firewall you need the PASSWORD!!!", 50);
+                        Console.ResetColor();
+                        Thread.Sleep(500);
+                        Console.Clear();
+                        PhasesList();
+                    }
+
+                    break;
+
+                case "3":
+                    if (progress == true)
+                    {
+                        BlurTracks();
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        TypingEffect("To bypass the Firewall you need the PASSWORD!!!", 50);
+                        Console.ResetColor();
+                        Thread.Sleep(500);
+                        Console.Clear();
+                        PhasesList();
+                    }
+
+                    break;
+
+                default:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    TypingEffect("To bypass the Firewall you need the PASSWORD!!!", 50);
+                    Console.WriteLine("Invalid selection. Try again.");
                     Console.ResetColor();
-                    Thread.Sleep(500);
-                    Console.Clear();
-                    PhasesList();
-                }
-                
-                break;
+                    Thread.Sleep(800);
+                    break;
+            }
+        }
 
-            case "3":
-                if (progress == true)
-                {
+        if (progress == true)
+        {
+            switch (userChoice)
+            {
+                case "1":
+                    CrackPassword();
+                    break;
+
+                case "2":
+
+                    FirewallBypass();
+                    break;
+
+                case "3":
+
                     BlurTracks();
-                }
-                else
-                {
+                    break;
+                case "4":
+                    func.database();
                     Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    TypingEffect("To bypass the Firewall you need the PASSWORD!!!", 50);
-                    Console.ResetColor();
-                    Thread.Sleep(500);
+                    Console.Write("Press any key to continue...");
                     Console.Clear();
                     PhasesList();
-                }
-                
-                break;
+                    break;
 
-            default:
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Invalid selection. Try again.");
-                Console.ResetColor();
-                Thread.Sleep(800);
-                break;
+
+                default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid selection. Try again.");
+                    Console.ResetColor();
+                    Thread.Sleep(800);
+                    break;
+            }
         }
     }
-    
+
 
     //PhaseList.PhaseList_func();
-    
+
     public static void Story()
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
         TypingEffect("\n/\n\n", 10);
-        TypingEffect("In 2041, the government’s ultra-secure network AegisNet hides a secret protocol called Project Helix\n\n", 40);
+        TypingEffect(
+            "In 2041, the government’s ultra-secure network AegisNet hides a secret protocol called Project Helix\n\n",
+            40);
         TypingEffect("an AI that can silently take [ MESSAGE HIDDEN ]\n\n", 60);
         TypingEffect("After a cryptic warning from an insider ", 60);
         TypingEffect("you as a hacker known as Cipher—\n\n", 40);
@@ -285,7 +323,9 @@ class HackerMission
         Thread.Sleep(1200);
         TypingEffect("AL1CE : FUCK It's too late, JUST whatever you do do not §&%$§ [ VOICE LOCKED ]\n\n", 20);
         Thread.Sleep(1200);
-        TypingEffect("Cypher : al1ce...al1ce....fuck...im...losing...my....neurolink....NEED....TO...FUCKING....ESCAPE\n\n\n", 20);
+        TypingEffect(
+            "Cypher : al1ce...al1ce....fuck...im...losing...my....neurolink....NEED....TO...FUCKING....ESCAPE\n\n\n",
+            20);
         Thread.Sleep(2000);
         TypingEffect("Cypher :  ACTIVATING BACK-END USER PROTOCOL ", 50);
 
@@ -354,6 +394,7 @@ class HackerMission
                     Thread.Sleep(500);
                     return;
                 case "99":
+                    progress = true;
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Dev Mode!!!");

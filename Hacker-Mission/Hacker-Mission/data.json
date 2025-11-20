@@ -1,0 +1,204 @@
+{
+  "devices": [
+    {
+      "id": "dev_001",
+      "name": "Main-Router",
+      "type": "router",
+      "ip": "192.168.0.1",
+      "status": "active",
+      "last_seen": "2025-11-20T14:12:30Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T14:10:02Z",
+          "event": "Port scanning attempt detected",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2025-11-20T14:05:11Z",
+          "event": "DHCP lease renewed",
+          "level": "info"
+        },
+        {
+          "timestamp": "2025-11-20T13:58:55Z",
+          "event": "Firewall rule updated",
+          "level": "info"
+        }
+      ]
+    },
+    {
+      "id": "dev_002",
+      "name": "Security-Gateway",
+      "type": "firewall",
+      "ip": "192.168.0.254",
+      "status": "active",
+      "last_seen": "2025-11-20T14:11:45Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T14:08:10Z",
+          "event": "Blocked unauthorized SSH connection",
+          "level": "error"
+        },
+        {
+          "timestamp": "2025-11-20T14:03:54Z",
+          "event": "Threat-level scan completed",
+          "level": "info"
+        }
+      ]
+    },
+    {
+      "id": "dev_003",
+      "name": "Workstation-Alpha",
+      "type": "pc",
+      "ip": "192.168.0.14",
+      "status": "inactive",
+      "last_seen": "2025-11-20T13:40:02Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T13:39:10Z",
+          "event": "User session terminated unexpectedly",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2025-11-20T13:32:21Z",
+          "event": "Antivirus scan failed",
+          "level": "error"
+        }
+      ]
+    },
+    {
+      "id": "dev_004",
+      "name": "Database-Server",
+      "type": "server",
+      "ip": "192.168.0.50",
+      "status": "active",
+      "last_seen": "2025-11-20T14:12:00Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T14:00:32Z",
+          "event": "Query overload detected",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2025-11-20T13:55:15Z",
+          "event": "Backup completed successfully",
+          "level": "info"
+        }
+      ]
+    },
+    {
+      "id": "dev_005",
+      "name": "Mail-Server",
+      "type": "server",
+      "ip": "192.168.0.60",
+      "status": "active",
+      "last_seen": "2025-11-20T14:09:30Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T14:07:55Z",
+          "event": "Failed login attempt detected",
+          "level": "warning"
+        },
+        {
+          "timestamp": "2025-11-20T13:59:41Z",
+          "event": "SMTP outbound queue cleared",
+          "level": "info"
+        }
+      ]
+    },
+    {
+      "id": "dev_006",
+      "name": "Camera-Hallway-01",
+      "type": "camera",
+      "ip": "192.168.0.101",
+      "status": "active",
+      "last_seen": "2025-11-20T14:12:22Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T14:11:03Z",
+          "event": "Motion detected",
+          "level": "info"
+        },
+        {
+          "timestamp": "2025-11-20T14:02:50Z",
+          "event": "Connection delay detected",
+          "level": "warning"
+        }
+      ]
+    },
+    {
+      "id": "dev_007",
+      "name": "Camera-Vault",
+      "type": "camera",
+      "ip": "192.168.0.102",
+      "status": "inactive",
+      "last_seen": "2025-11-20T13:20:00Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T13:19:55Z",
+          "event": "Device lost connection",
+          "level": "error"
+        }
+      ]
+    },
+    {
+      "id": "dev_008",
+      "name": "Workstation-Beta",
+      "type": "pc",
+      "ip": "192.168.0.15",
+      "status": "active",
+      "last_seen": "2025-11-20T14:11:01Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T14:09:14Z",
+          "event": "User logged in",
+          "level": "info"
+        },
+        {
+          "timestamp": "2025-11-20T14:03:49Z",
+          "event": "Unauthorized file access attempt",
+          "level": "warning"
+        }
+      ]
+    },
+    {
+      "id": "dev_009",
+      "name": "Proxy-Node",
+      "type": "proxy",
+      "ip": "192.168.0.200",
+      "status": "active",
+      "last_seen": "2025-11-20T14:12:30Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T14:10:10Z",
+          "event": "Traffic rerouted via fallback tunnel",
+          "level": "info"
+        },
+        {
+          "timestamp": "2025-11-20T13:55:00Z",
+          "event": "High-latency spike detected",
+          "level": "warning"
+        }
+      ]
+    },
+    {
+      "id": "dev_010",
+      "name": "AI-Core",
+      "type": "ai-module",
+      "ip": "192.168.0.250",
+      "status": "active",
+      "last_seen": "2025-11-20T14:12:29Z",
+      "logs": [
+        {
+          "timestamp": "2025-11-20T14:09:00Z",
+          "event": "Behavior anomaly detected",
+          "level": "error"
+        },
+        {
+          "timestamp": "2025-11-20T14:00:12Z",
+          "event": "Neural cluster synced",
+          "level": "info"
+        }
+      ]
+    }
+  ]
+}
