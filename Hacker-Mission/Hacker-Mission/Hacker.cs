@@ -13,6 +13,33 @@ class HackerMission
     public static bool BlurredTracks = false;
     public static bool SawDB = false;
 
+    public static void NotDone()
+    {
+        Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine(@"
+     O         O
+      \\     // 
+       \\   //
+        \\ // 
+       /~~~~~\
+,-------------------,
+| ,---------------, |
+| |               | |
+| |     503       | |
+| |    ERROR      | |
+| |               | |
+| |_______________| |
+|___________________|
+|___________________|");
+        
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        TypingEffect("\n\nThis level is not available at the moment.", 60);
+        Console.ResetColor();
+        Thread.Sleep(2500);
+        Console.Clear();
+        PhasesList();
+    }
     public static void GameOver()
     {
         // HUGE ASCII
@@ -314,12 +341,10 @@ class HackerMission
                 case "4":
 
                     Console.Clear();
-
-                    Console.Clear();
-                    PhasesList();
+                    NotDone();
                     break;
                 case "5":
-                    sell_data();
+                    NotDone();
                     break;
 
                 default:
@@ -438,6 +463,7 @@ class HackerMission
         Console.ForegroundColor = ConsoleColor.Yellow;
         TypingEffect("\nPress any key to continue... ", 60);
         Console.ResetColor();
+        Console.ReadKey();
         Console.Clear();
         
         
@@ -556,7 +582,7 @@ class HackerMission
                     Thread.Sleep(500);
                     return;
                 case "99":
-                    progress = false; // DEV MODDER FULL LEVEL
+                    progress = true; // DEV MODDER FULL LEVEL
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Dev Mode!!!");
