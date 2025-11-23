@@ -3,13 +3,34 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Collections.Generic;
 using System.Text.Json;
-using data;
+// using data;
 
 
 class HackerMission
 {
     public static bool progress = false;
     public static string backEndUser = "";
+    public static bool BlurredTracks = false;
+    public static bool SawDB = false;
+
+    public static void GameOver()
+    {
+        // HUGE ASCII
+        Console.ForegroundColor = ConsoleColor.Red;
+        string x = @" 
+ ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  
+ ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
+▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
+░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  
+░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒
+ ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
+  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░
+░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░ 
+      ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     
+                                                     ░                   ";
+        TypingEffect(x, 1);
+        Console.ResetColor();
+    }
 
     // Typing effect
     static void TypingEffect(string text, int delay)
@@ -27,8 +48,9 @@ class HackerMission
 
     public static void BackEndUserProtocol()
     {
-        TypingEffect("YOU ARE THE BACK-END USER : \n\n", 50);
+        TypingEffect("YOU ARE THE BACK-END USER!!! \n\n", 50);
         TypingEffect("WHAT IS YOUR NAME : ", 50);
+            
 
         backEndUser = Console.ReadLine();
         TypingEffect("NOW SET PASSWORD : ", 50);
@@ -42,13 +64,13 @@ class HackerMission
     public static string GenerateRandomWord(int min = 5, int max = 8)
     {
         const string chars = "abcdefghijklmnopqrstuvwxyz1234567890'#!§$%&/()=?";
-        Random rand = Random.Shared;
+        Random x = Random.Shared;
 
-        int length = rand.Next(min, max);
+        int length = x.Next(min, max);
         char[] word = new char[length];
 
         for (int i = 0; i < length; i++)
-            word[i] = chars[rand.Next(chars.Length)];
+            word[i] = chars[x.Next(chars.Length)];
 
         return new string(word);
     }
@@ -66,8 +88,14 @@ class HackerMission
             TypingEffect($"Injecting spoof packets...{i}0%\n", 1);
         }
 
+        Console.ForegroundColor = ConsoleColor.Green;
         TypingEffect("\nBypass complete!\n", 50);
-        Console.ReadLine();
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        TypingEffect("\nPress any key to continue... ", 60);
+        Console.ResetColor();
+        Console.ReadKey();
+        Console.Clear();
+        PhasesList();
     }
 
     static void BlurTracks()
@@ -77,7 +105,13 @@ class HackerMission
         TypingEffect("Deleting logs...\n", 60);
         TypingEffect("Spoofing IP...\n", 60);
         TypingEffect("Tracks blurred.\n", 60);
-        Console.ReadLine();
+        
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        TypingEffect("\nPress any key to continue... ", 60);
+        Console.ResetColor();
+        Console.ReadKey();
+        Console.Clear();
+        PhasesList();
     }
 
     static void CrackPassword()
@@ -242,7 +276,7 @@ class HackerMission
                     {
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Red;
-                        TypingEffect("To bypass the Firewall you need the PASSWORD!!!", 50);
+                        TypingEffect("No Tracks Found on The Network.....", 50);
                         Console.ResetColor();
                         Thread.Sleep(500);
                         Console.Clear();
@@ -278,15 +312,15 @@ class HackerMission
                     BlurTracks();
                     break;
                 case "4":
-                    
+
                     Console.Clear();
-                    func.Database();
-                        
+
                     Console.Clear();
                     PhasesList();
                     break;
                 case "5":
-                    
+                    sell_data();
+                    break;
 
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -306,25 +340,25 @@ class HackerMission
         Console.WriteLine("-----Chat With Specter -----");
         Console.ResetColor();
         Thread.Sleep(500);
-        
+
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.Write("[You] - 21:14 ");
         Console.ResetColor();
         TypingEffect("Are you Specter?\n\n", 100);
         Thread.Sleep(500);
-        
+
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.Write("[Specter] - 21:14 ");
         Console.ResetColor();
         TypingEffect("Depends. Who’s asking?\n\n", 100);
         Thread.Sleep(500);
-        
+
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.Write("[You] - 21:15 ");
         Console.ResetColor();
         TypingEffect("Someone who was told you have “the package.”\nI have the access code. Sending now.\n\n", 100);
         Thread.Sleep(500);
-        
+
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write("[System] - 21:15. ");
         Console.ResetColor();
@@ -336,42 +370,116 @@ class HackerMission
         TypingEffect("access.key", 100);
         Console.ResetColor();
         Thread.Sleep(500);
-        
-        
+
+
     }
-    
+
     public static void Story()
     {
+        static void Cypher()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            TypingEffect($"[ You ] : ", 20);
+            Console.ResetColor();
+            Console.ReadLine();
+        }
+
+
+
+        static void UserInput()
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            TypingEffect("ACTIVATE [ yes | no ] : ", 30);
+            Console.ResetColor();
+            string condition = Console.ReadLine();
+
+            switch (condition)
+            {
+                case "yes":
+                    BackEndUserProtocol();
+                    break;
+                case "no":
+                    GameOver();
+                    break;
+
+            }
+        }
+
         Console.ForegroundColor = ConsoleColor.Cyan;
         TypingEffect("\n/\n\n", 10);
         TypingEffect(
-            "In 2041, the government’s ultra-secure network AegisNet hides a secret protocol called Project Helix\n\n",
+            "In 2041, the government’s ultra-secure network AegisNet hides a secret protocol called",
             40);
-        TypingEffect("an AI that can silently take [ MESSAGE HIDDEN ]\n\n", 60);
+        Console.ForegroundColor = ConsoleColor.Red;
+        TypingEffect(" Project Helix\n\n", 40);
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        TypingEffect("an AI that can silently take ", 60);
+        Console.ForegroundColor= ConsoleColor.Red;
+        TypingEffect("[ MESSAGE HIDDEN ]\n\n", 60);
+        Console.ResetColor(); 
+        Console.ForegroundColor = ConsoleColor.Cyan;
         TypingEffect("After a cryptic warning from an insider ", 60);
-        TypingEffect("you as a hacker known as Cipher—\n\n", 40);
-        TypingEffect("must break into AegisNet to stop Helix from [ MESSAGE HIDDEN ].\n\n", 60);
-        TypingEffect("But once inside, you discover [ MESSAGE HIDDEN ] and [ MESSAGE HIDDEN ]\n\n\n", 40);
+        TypingEffect("YOU as a hacker known as Cipher—\n\n", 40);
+        TypingEffect("must break into AegisNet to stop Helix from ", 60);
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.ForegroundColor = ConsoleColor.Red;
+        TypingEffect("[ MESSAGE HIDDEN ]\n\n", 60);
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        TypingEffect("But once inside, you discover ", 40);
+        Console.ForegroundColor = ConsoleColor.Red;
+        TypingEffect("[ MESSAGE HIDDEN ]", 40);
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        TypingEffect(" and ", 40);
+        Console.ForegroundColor = ConsoleColor.Red;
+        TypingEffect("[ MESSAGE HIDDEN ]\n\n\n", 40);
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        TypingEffect("\nPress any key to continue... ", 60);
+        Console.ResetColor();
         Console.Clear();
+        
+        
+        
+        Console.ForegroundColor = ConsoleColor.Yellow;
         TypingEffect("...........[ INTRUSION DETECTED ]............\n\n", 20);
+        Console.ResetColor();
         Thread.Sleep(700);
-        TypingEffect("AL1CE : Cypher..This is Al1ce...\n\n", 20);
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+        TypingEffect("[ AL1CE ] : ", 20);
+        Console.ResetColor();
+        TypingEffect("Cypher..This is Al1ce...\n\n", 20);
         Thread.Sleep(1000);
-        TypingEffect("Cypher : Al1ce ??...How did you get into this SERVER ?\n\n", 20);
+        Cypher();
         Thread.Sleep(1200);
-        TypingEffect("AL1CE : There is NO TIME..The Job is FUCKED. You need to LEAVE NOW !!!\n\n", 20);
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+        TypingEffect("\n[ AL1CE ] : ", 20);
+        Console.ResetColor();
+        TypingEffect("There is NO TIME..The Job is FUCKED. You need to LEAVE NOW !!!\n\n", 20);
         Thread.Sleep(1200);
-        TypingEffect("Cypher : Wait What THE FUCK ! I can't UNLINK\n\n", 20);
+        Cypher();
         Thread.Sleep(1200);
-        TypingEffect("AL1CE : FUCK It's too late, JUST whatever you do do not §&%$§ [ VOICE LOCKED ]\n\n", 20);
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+        TypingEffect("\n[ AL1CE ] : ", 20);
+        Console.ResetColor();
+        TypingEffect("It's too late, JUST whatever you do do not §&%$§ [ VOICE LOCKED ]\n\n", 20);
+
         Thread.Sleep(1200);
-        TypingEffect(
-            "Cypher : al1ce...al1ce....fuck...im...losing...my....neurolink....NEED....TO...FUCKING....ESCAPE\n\n\n",
-            20);
-        Thread.Sleep(2000);
-        TypingEffect("Cypher :  ACTIVATING BACK-END USER PROTOCOL ", 50);
+        Console.ForegroundColor = ConsoleColor.Red;
+        TypingEffect("You are losing the NETLINK - ", 30);
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        TypingEffect("[ ACTIVATE BACK-END USER ]\n", 30);
+        Console.ResetColor();
 
         Thread.Sleep(2000);
+        Console.ForegroundColor = ConsoleColor.Magenta;
+        TypingEffect("\n[SYSTEM] : ", 20);
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        TypingEffect("ACTIVATING ", 50);
+        Console.ResetColor();
+        TypingEffect("BACK-END USER PROTOCOL ", 50);
+        Thread.Sleep(2500);
 
         Console.Clear();
         BackEndUserProtocol();
@@ -411,7 +519,19 @@ class HackerMission
                 case "02":
                     Console.Clear();
                     TypingEffect("Tutorial: Choose 01 to start, 03 to exit.\n", 50);
-                    Console.ReadLine();
+                    Thread.Sleep(2500);
+                    Console.Clear();
+                    Console.WriteLine(@"
+
+              __..--''``---....___   _..._    __
+    /// //_.-'    .-/"";  `        ``<._  ``.''_ `. / // /
+   ///_.-' _..--.'_    \                    `( ) ) // //
+   / (_..-' // (< _     ;_..__               ; `' / ///
+    / // // //  `-._,_)' // / ``--...____..-' /// / //");
+                    Thread.Sleep(2500);
+                    TypingEffect("\nReally? You need a Tutorial?", 70);
+                    TypingEffect("...\n", 500);
+                    Thread.Sleep(1500);
                     break;
 
                 case "3":
@@ -436,7 +556,7 @@ class HackerMission
                     Thread.Sleep(500);
                     return;
                 case "99":
-                    progress = true;
+                    progress = false; // DEV MODDER FULL LEVEL
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Dev Mode!!!");
